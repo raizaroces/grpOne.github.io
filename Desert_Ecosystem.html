@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Presentation</title>
+<img src="DESERT.png" style="width: 100%; height: 100%;">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+  }
+  
+  .container {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+  }
+    .containerr {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+
+  }
+  .containerrr {
+    position: absolute;
+    top: 5%;
+    left: 20%;
+  }
+  .containerrrr {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+  }
+  .cloud {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+  }
+  .cloudd {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+  }
+  .clouddd {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+  }
+  .cloudddd {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+  .clouddddd {
+    position: absolute;
+    top: 40px;
+    left: 73%;
+  }
+  .image {
+    position: fixed;
+    width: 13%;
+    height: 15%;
+    cursor: pointer;
+    top: 59%;
+    left: 47%;
+  }
+    .cac {
+    position: fixed ;
+    width: 11%;
+    height: 25%;
+    cursor: pointer;
+    top: 53%;
+    left: 15%;
+  }
+  .sun {
+    position: fixed ;
+    width: 15%;
+    height: 30%;
+    cursor: pointer;
+    top: 15%;
+    left: 4%;
+  }
+  .tumble {
+    position: fixed ;
+    width: 10%;
+    height: 25%;
+    cursor: pointer;
+    top: 61%;
+    left: 26%;
+    filter: brightness(-15);
+  }
+  
+  .snake {
+    position: fixed ;
+    width: 7%;
+    height: 8%;
+    cursor: pointer;
+    top: 61%;
+    left: 62%;
+  }
+  .scorp {
+    position: fixed ;
+    width: 5%;
+    height: 5%;
+    cursor: pointer;
+    top: 71%;
+    left: 63%;
+  }
+  .ant {
+    position: fixed ;
+    width: 5%;
+    height: 3%;
+    cursor: pointer;
+    top: 75%;
+    left: 68%;
+  }
+  .fungi {
+    position: fixed ;
+    width: 5%;
+    height: 6%;
+    cursor: pointer;
+    top: 80%;
+    left: 40%;
+  }
+  .bacteria {
+    position: fixed ;
+    width: 5%;
+    height: 5%;
+    cursor: pointer;
+    top: 81%;
+    left: 36%;
+  }
+  .oasis {
+    position: fixed ;
+    width: 26%;
+    height: 18%;
+    cursor: pointer;
+    top: 61%;
+    left: 73%;
+  }
+  .info-box {
+    position: relative;
+    position: absolute;
+    width: 900px;
+    background-color: rgb(255, 193, 112);
+    padding: 50px;
+    border: 6px solid #000000;
+    border-radius: 50px;
+    display: none;
+  }
+  .image:hover + .info-box {
+    display: block;
+  }
+  .info-boxx {
+    position: relative;
+    position: absolute;
+    width: 400px;
+    background-color: rgba(112, 255, 83, 0.973);
+    padding: 50px;
+    border: 6px solid #000000;
+    border-radius: 50px;
+    display: none;
+  }
+  .cac:hover + .info-boxx {
+    display: block;
+  }
+  .info-boxxx {
+    position: relative;
+    position: absolute;
+    width: 1000px;
+    background-color: yellow;
+    padding: 50px;
+    border: 6px solid #000000;
+    border-radius: 50px;
+    display: none;
+  }
+  .sun:hover + .info-boxxx {
+    display: block;
+  }
+  .info-boxxxx {
+    position: absolute;
+    width: 800px;
+    background-color: rgba(233, 211, 86, 0.973);
+    padding: 50px;
+    border: 6px solid #000000;
+    border-radius: 50px;
+    display: none;
+
+  }
+  .tumble:hover + .info-boxxxx {
+    display: block;
+}
+.info-boxxxxx {
+    position: relative;
+    position: absolute;
+    width: 400px;
+    background-color: rgba(255, 250, 148, 0.534);
+    padding: 30px;
+    border: 6px solid #000000;
+    border-radius: 50px;
+    display: none;
+
+  }
+  .snake:hover + .info-boxxxxx {
+    display: block;
+  }
+  .info-boxxxxxx {
+    position: relative;
+    position: absolute;
+    width: 900px;
+    background-color: rgb(213, 91, 91);
+    padding: 50px;
+    border: 6px solid #000000;
+    border-radius: 50px;
+    display: none;
+  }
+  .scorp:hover + .info-boxxxxxx {
+    display: block;
+  }
+  .info-ant {
+    position: relative;
+    position: absolute;
+    width: 300px;
+    background-color: rgba(241, 255, 152, 0.968);
+    padding: 40px;
+    border: 6px solid #000000;
+    border-radius: 50px;
+    display: none;
+    top: 10%;
+    left: 70%;
+    transform: translate(69%, -67%);
+
+  }
+  .ant:hover + .info-ant {
+    display: block;
+  }
+  .info-boxxxxxxxx {
+    position: relative;
+    position: absolute;
+    background-color: rgb(149, 139, 47);
+    padding: 50px;
+    border: 6px solid #000000;
+    border-radius: 50px;
+    display: none;
+  }
+  .info-boxz {
+    position: relative;
+    position: absolute;
+    width: 900px;
+    background-color: rgb(110, 226, 78);
+    padding: 50px;
+    border: 6px solid #000000;
+    border-radius: 50px;
+    display: none;
+  }
+  .fungi:hover + .info-boxxxxxxxx {
+    display: block;
+  }
+  .info-boxxxxxxxxx {
+    position: relative;
+    position: absolute;
+    width: 280px;
+    background-color: rgb(27, 157, 174);
+    padding: 50px;
+    border: 6px solid #000000;
+    border-radius: 50px;
+    display: none;
+  }
+  .bacteria:hover + .info-boxz {
+    display: block;
+  }
+  .info-boxxxxxxxxx {
+    position: relative;
+    position: absolute;
+    width: 280px;
+    background-color: rgb(83, 226, 245);
+    padding: 50px;
+    border: 6px solid #000000;
+    border-radius: 50px;
+    display: none;
+  }
+  .oasis:hover + .info-boxxxxxxxxx {
+    display: block;
+  }
+  .members {
+    position: fixed ;
+    width: 13%;
+    height: 22%;
+    cursor: pointer;
+    top: 3%;
+    left: 83%;
+  }
+  .info-boxs{
+    position: relative;
+    position: absolute;
+    background-color: rgba(248, 248, 248, 0.921);
+    padding: 60px;
+    border: 6px solid #000000;
+    border-radius: 50px;
+    display: none;
+    top: 3%;
+    left: 3%;
+    width: 180px;
+    transform: translate(210%, -20%);
+  }
+  .members:hover + .info-boxs {
+    display: block;
+  }
+        /* Back button */
+        .button {
+            background-color: #e3ebd7;
+            font-size: 25px;
+            font-weight: bold;
+            color: black;
+            width: 154%;
+            border: none;
+            box-shadow: 0 10px black;
+            border-radius: 70px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transform: translate(-96%, -304%);
+            
+        }
+
+        .button:hover {
+            background-color: red;
+            color: white;
+        }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img class="image" src="CAMEL.png" alt="CAMEL">
+  <div class="info-box">
+     <h1> Camel - Consumer </h1>
+    <h5>Camels are one of the most iconic animals found in the arid regions of the world due to their remarkable adaptive characteristics. 
+      These magnificent animals have developed various physical, behavioral, and physiological adaptations to survive in the harsh desert 
+      environment. Camels are renowned for their water conservation abilities and their humps, but their adaptations go far beyond that.
+    <br>
+    <br>
+    Camels play a crucial role in desert ecosystems by serving as reliable modes of transportation, providing nutritious milk and lean meat,
+     offering tourism opportunities, contributing to therapy practices, and showcasing remarkable adaptations that enable their survival in harsh 
+     conditions. Physiologically, camels excel at water conservation through efficient kidneys and specialized nasal passages, allowing them to endure
+      long periods without drinking. Their ability to regulate body temperature, walk on hot sand with rubbery pads, and withstand extreme heat 
+      showcases their physical resilience. Behaviorally, camels exhibit socialization, foraging, communication, and resilience traits that aid in 
+      their survival, highlighting their multifaceted importance in desert regions. </h5>
+  </div>
+</div>
+<div class="containerr">
+    <img class="cac" src="CACTUS.png" alt="CACTUS">
+    <div class="info-boxx">
+      <h1>Cactus - Producer</h1>
+      <h5>A cactus is a member of the plant family Cactaceae, a family comprising about 127 genera with some 1,750 known species of the order Caryophyllales.
+      Cacti are an essential part of the desert ecosystem. They provide homes and shelter for a wide variety of animals, and their roots help to stabilize
+       the soil. Cacti also play an important role in the water cycle by absorbing and storing water.
+       <br>
+       Cacti are an essential part of the desert ecosystem. They provide homes and shelter for a wide variety of animals, and their roots help to stabilize 
+       the soil. Cacti also play an important role in the water cycle by absorbing and storing water. </h5>
+    </div>
+  </div>
+  <div class="containerrr">
+    <img class="sun" src="SUNLIGHT.png" alt="SUN">
+    <div class="info-boxxx">
+      <h1>Sunlight - Abiotic Factor</h1>
+      <h5>Sunlight, also known as solar radiation, refers to the incoming light to the Earth that originated from the Sun.
+        Desert humidity is usually so low that not enough water vapor exists to form clouds. The sun’s rays beat down through 
+        cloudless skies and bake the land. The ground heats the air so much that air rises in waves you can actually see. <Br>
+        Desert humidity is usually so low that not enough water vapor exists to form clouds. The sun’s rays beat down through
+         cloudless skies and bake the land. The ground heats the air so much that air rises in waves you can actually see. </h5>
+    </div>
+  </div>
+  <div class="containerrrr">
+    <img class="tumble" src="WEED.png" alt="TUMBLEWEED">
+    <div class="info-boxxxx">
+      <h1>Tumbleweed - Producer</h1>
+      <h5>A tumbleweed is a structural part of the above-ground anatomy of a number of species of plants. It is a diaspore 
+        that, once mature and dry, detaches from its root or stem and rolls due to the force of the wind. In most such species,
+         the tumbleweed is in effect the entire plant apart from the root system, but in other plants, a hollow fruit or 
+         inflorescence might detach instead.</h5>
+      </div>
+    </div>
+    <div class="cloud">
+      <img class="snake" src="SNAKE.png" alt="SNAKE">
+      <div class="info-boxxxxx">
+        <h1>Snake - Consumer</h1>
+        <h5>
+          Snakes are reptiles that often inhabit desert environments. They are predators,
+           feeding on smaller animals such as rodents, lizards, and insects.
+        </h5>
+      </div>
+  </div>
+  <div class="cloudd">
+    <img class="scorp" src="SCORPION.png" alt="SCORPION">
+    <div class="info-boxxxxxx">
+      <h1>Scorpion - Consumer </h1>
+      <h5>Scorpions are predatory arachnids of the order Scorpiones. They have eight legs and are easily recognized by a pair of 
+        grasping pincers and a narrow, segmented tail, often carried in a characteristic forward curve over the back and always ending 
+        with a stinger. Snakes help maintain balance in desert ecosystems by preying on rodents, which can otherwise reproduce rapidly and become 
+        pests. </h5>
+     
+      <br>
+      <br>
+      Benefits:
+      Control of pests: By feeding on insects and other arthropods, scorpions assist in regulating their numbers and preserving the
+       natural equilibrium of desert ecosystems.
+      
+      
+       Food source: A variety of desert animals, including as birds, mammals, and other arachnids, rely heavily on scorpions for 
+       their sustenance. They sustain biodiversity and add to the food web. 
+      
+      <br>
+      <br>
+  
+      
+      Adaptations to desert life: Scorpions' amazing adaptations to thrive in the harsh desert environment include 
+      their capacity to endure extremely high temperatures and preserve water. Researching these adaptations can shed light
+       on the ecology of the desert and stimulate the development of biomimetic materials and technologies. </h5>
+      </h2>
+    </div>
+</div>
+<div class="clouddd">
+    <img class="ant" src="ANT.png" alt="ANT">
+    <div class="info-ant">
+      <h1>Ant - Consumer</h1>
+      <h5>Ants are social insects found in virtually all terrestrial environments, including deserts. They live in colonies
+       and perform various ecological functions, such as seed dispersal, soil aeration, and nutrient cycling.
+      <br>
+      Seed dispersal: Ants play a vital role in dispersing seeds of many desert plants. Some plants have specialized structures 
+      called elaiosomes, which attract ants. Ants carry these seeds to their nests, consume the elaiosomes, and discard the intact 
+      seeds in nutrient-rich locations, facilitating their germination and growth.</h5>
+    </div>
+</div>
+
+<div class="cloudddd">
+  <img class="fungi" src="FUNGI.png" alt="FUNGI">
+  <div class="info-boxxxxxxxx">
+    <h1>Fungi - Decomposer</h1>
+    <h5>a diverse group of organisms that play a crucial role in decomposition in the desert ecosystem. <br> They secrete enzymes to break down complex organic matter, such as dead plant material and animal remains, into simpler nutrients. Fungi form symbiotic relationships with plant roots, known as mycorrhizae, helping plants absorb water and nutrients from the soil in exchange for carbohydrates. <br> In the desert, fungi are particularly important for nutrient cycling and soil health, contributing to the availability of essential nutrients for plants and other organisms. </h5>
+  </div>
+  <div class="cloudddd">
+    <img class="bacteria" src="BACTERIA.png" alt="BACTERIA">
+    <div class="info-boxz">
+      <h1>Bacteria - Decomposer</h1>
+      <h5>are single-celled microorganisms that are abundant in the desert ecosystem and play a vital role in decomposition.
+        They break down organic matter, such as dead plants, animals, and fecal matter, into simpler compounds, releasing nutrients like nitrogen, phosphorus, and potassium back into the soil.
+        <br>
+        Some bacteria form mutualistic relationships with plants, helping them fix nitrogen from the atmosphere, which is essential for plant growth in nutrient-poor desert soils.
+        <br> 
+        Bacteria are also involved in various other processes, such as nutrient cycling, nitrogen fixation, and soil formation, contributing to the overall health and functioning of the desert ecosystem.
+      </h5>
+    </div>
+</div>
+<div class="clouddddd">
+  <img class="oasis" src="OASIS.png" alt="OASIS">
+  <div class="info-boxxxxxxxxx">
+    <h1>Oasis - Abiotic Factor</h1> 
+    <h5>Oasis is a lush green area in the middle of a desert, centered around a natural spring 
+      or a well. It is almost a reverse island, in a sense, because it is a tiny area of water surrounded 
+      by a sea of sand or rock. Oases can be fairly easy to spot—at least in deserts that do not have 
+      towering sand dunes. In many cases, the oasis will be the only place where trees such as date 
+      palms grow for miles around. For centuries, the sight of an oasis on the horizon has been a very
+       welcome one for desert travelers. </h5>
+  </div>
+  <div class="cloudddd">
+    <img class="members" src="MEMBERS.png" alt="MEMBERS">
+    <div class="info-boxs">
+      <h1>GROUP 1</h1>
+      <h3>MEMBERS:</h3>
+      <h5>
+        <br>
+        Campos, Charles<br>
+        Gutierrez, Jodie Lyn <br>
+        Natividad, Aaron William <br>
+        Nefulda, Cenex <br>
+        Neri, Ryan <br>
+        Oliveros, Ryane <br>
+        Palsimon, Mark Vincent <br>
+        Roces, Raiza 
+      </h5>
+    </div>
+</div>
+<form>
+  <button class="button" formaction="index.html"> < </button>
+</form>
+</body> 
+</html>
